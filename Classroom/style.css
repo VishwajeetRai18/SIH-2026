@@ -1,0 +1,42 @@
+*{
+    color:blanchedalmond;
+}
+
+h1{
+    text-decoration:overline;
+    font-weight:Bolder;
+}
+h2{
+    color:#df4c27;
+    text-decoration: dashed line-through;
+}
+
+button{
+    color:coral;
+    background-color:darkkhaki
+}
+
+body{
+    background-color:rgb(115,200,150);
+}
+
+#headingOne{
+    color: rgb(91, 67, 186);
+    text-align:center;
+    text-decoration:yellow wavy underline ;
+    text-weight:bolder;
+}
+
+.myClass{
+    color:midnightblue;
+}
+
+#box{
+    background-color: blue;
+    text-align: center;
+}
+
+ a{
+    text-decoration:none;
+    color:brown;
+ }   

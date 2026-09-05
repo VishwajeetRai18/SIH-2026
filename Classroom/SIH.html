@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Skillmpact - Trainee Profile</title>
+
+    <link rel="stylesheet" href="SIHstyle.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="top-header">
+
+        <div class="logo-area">
+
+            <div class="logo-icon">
+                <span>▥</span>
+            </div>
+
+            <h2>Skillmpact</h2>
+
+        </div>
+
+        <div class="top-header-links">
+            <a href="dashboard.html" class="sidebar-link">
+                    Outcomes Overview
+                </a>
+
+                <a href="trainee.html" class="sidebar-link">
+                    Trainee Profile
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    Outcome Validation
+                </a>
+
+                <a href="#" class="sidebar-link">
+                    Provider Matrix
+                </a>
+        </div>
+
+        <div class="header-right">
+
+            <span class="notification"><p style="font-size: 15px; font-weight: 500;">Admin</p></span>
+
+            <div class="header-profile">
+                <img src="images/SIHprofile.webp" alt="Profile">
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= MAIN LAYOUT ================= -->
+
+    <div class="dashboard">
+
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar">
+
+            <nav>
+
+                <a href="#" class="sidebar-link active">
+                    <span class="side-icon">◉</span>
+                    Outcomes Overview
+                </a>
+
+                <a href="#wage-progression" class="sidebar-link ">
+                    <span class="side-icon">↗</span>
+                    Wage Progression
+                </a>
+
+                <a href="#skill-gap" class="sidebar-link">
+                    <span class="side-icon">⚠</span>
+                    Skill Gaps
+                </a>
+
+                <a href="#district-reports" class="sidebar-link">
+                    <span class="side-icon">▦</span>
+                    District Reports
+                </a>
+
+            </nav>
+
+        </aside>
+
+
+        <!-- ================= MAIN CONTENT (from reference image) ================= -->
+
+        <main class="main-content">
+
+            <!-- ================= FILTER BAR ================= -->
+
+            <div class="filter-bar">
+
+                <!-- <button class="filter-chip">Cohort: 2024-A <span class="chip-caret">⌄</span></button>
+                <button class="filter-chip">Course: Systems Engineering <span class="chip-caret">⌄</span></button>
+                <button class="filter-chip">Provider: TechLabs <span class="chip-caret">⌄</span></button>
+                <button class="filter-chip">District: Central Valley <span class="chip-caret">⌄</span></button>
+                <button class="filter-chip">Demographics: Youth <span class="chip-caret">⌄</span></button> -->
+                <select  class="filter-chip">
+                    <option selected disabled>Course</option>
+                    <option value="SE">Systems Engineering</option>
+                    <option value="DS">Data Entry & Digital Skills</option>
+                    <option value="Electrician">Electrician</option>
+                    <option value="Healthcare">Healthcare / General Duty Assistant</option>
+                    <option value="Sales">Retail Sales Associate</option>
+                </select>
+                <select  class="filter-chip">
+                    <option selected disabled>Provider</option>
+                    <option value="alpha">Provider Alpha</option>
+                    <option value="beta">Provider Beta</option>
+                    <option value="gamma">Provider Gamma</option>
+                </select>
+                <select  class="filter-chip">
+                    <option selected disabled>District</option>
+                    <option value="Varanasi">Varanasi</option>
+                    <option value="Prayagraj">Prayagraj</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Jhansi">Jhansi</option>
+                    <option value="Merrut">Merrut</option>
+                </select>
+
+                <button class="apply-changes filter-chip">Apply Filter</button>
+
+            </div>
+
+
+            <!-- ================= STAT CARDS ================= -->
+
+            <section class="stat-grid">
+
+                <div class="stat-card">
+                    <span class="stat-dot dot-blue"></span>
+                    <p class="stat-label">Total Trainees</p>
+                    <p class="stat-value">18,647</p>
+                    <div class="stat-foot">
+                        <span class="stat-note">Enrolled</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-dot dot-green"></span>
+                    <p class="stat-label">Verified Placement Rate</p>
+                    <p class="stat-value">74.8%</p>
+                    <div class="stat-foot">
+                        <span class="stat-note">Employer confirmed</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-dot dot-orange"></span>
+                    <p class="stat-label">Avg Wage Hike</p>
+                    <p class="stat-value">62.3%</p>
+                    <div class="stat-foot">
+                        <span class="stat-note">Pre vs post-training median</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <span class="stat-dot dot-purple"></span>
+                    <p class="stat-label">6-Month Retention</p>
+                    <p class="stat-value">81.2%</p>
+                    <div class="stat-foot">
+                        <span class="stat-note">Employment continuity</span>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <!-- ================= WAGE PROGRESSION ================= -->
+
+            <section class="panel wage-panel" id="wage-progression">
+
+                <div class="panel-header">
+                    <div>
+                        <h2>Wage Progression</h2>
+                        <p class="panel-subtitle">Monthly median (INR) — Pre / Post / 6-Month</p>
+                    </div>
+                    <span class="range-pill">APR – OCT 2025</span>
+                </div>
+
+                <div class="chart-wrap">
+
+                    <svg viewBox="0 0 1080 340" class="line-chart" preserveAspectRatio="none">
+
+                        <!-- gridlines -->
+                        <line x1="0" y1="60" x2="1080" y2="60" class="grid-line"></line>
+                        <line x1="0" y1="220" x2="1080" y2="220" class="grid-line"></line>
+
+                        <!-- pre-training (gray, flat-ish) -->
+                        <polyline class="line-pre"
+                            points="0,258 154,255 308,262 462,254 617,260 771,246 925,252 1080,248" />
+
+                        <!-- post-placement (blue) -->
+                        <polyline class="line-post"
+                            points="0,190 154,175 308,160 462,148 617,132 771,116 925,100 1080,84" />
+
+                        <!-- 6-month follow-up (green) -->
+                        <polyline class="line-six"
+                            points="0,70 154,60 308,52 462,44 617,38 771,30 925,26 1080,20" />
+
+                    </svg>
+
+                    <div class="chart-y-labels">
+                        <span>₹14k</span>
+                        <span>₹9k</span>
+                    </div>
+
+                    <div class="chart-x-labels">
+                        <span>Apr</span>
+                        <span>May</span>
+                        <span>Jun</span>
+                        <span>Jul</span>
+                        <span>Aug</span>
+                        <span>Sep</span>
+                        <span>Oct</span>
+                    </div>
+
+                </div>
+
+                <div class="chart-legend">
+                    <span class="legend-item"><i class="dot legend-six"></i>6-Month Follow-up</span>
+                    <span class="legend-item"><i class="dot legend-post"></i>Post-Placement</span>
+                    <span class="legend-item"><i class="dot legend-pre"></i>Pre-Training</span>
+                </div>
+
+            </section>
+
+
+            <!-- ================= SKILL GAP + PLACEMENT ================= -->
+
+            <div class="two-panel-row">
+
+                <section class="panel skillgap-panel" id="skill-gap">
+
+                    <h2>Skill Gap Deficits vs Market Hiring Urgency</h2>
+                    <p class="panel-subtitle">Positive bars = core curriculum strengths; negative bars = trainee non-placement gaps</p>
+
+                    <div class="bar-chart-wrap">
+
+                        <svg viewBox="0 0 620 260" class="bar-chart" preserveAspectRatio="none">
+
+                            <line x1="0" y1="120" x2="620" y2="120" class="zero-line"></line>
+                            <line x1="0" y1="60" x2="620" y2="60" class="grid-line"></line>
+                            <line x1="0" y1="180" x2="620" y2="180" class="grid-line"></line>
+
+                            <!-- positive bars -->
+                            <rect x="30"  y="55"  width="62" height="65"  class="bar-pos"></rect>
+                            <rect x="128" y="30"  width="62" height="90"  class="bar-pos"></rect>
+                            <rect x="226" y="72"  width="62" height="48"  class="bar-pos"></rect>
+                            <rect x="324" y="33"  width="62" height="87"  class="bar-pos"></rect>
+
+                            <!-- negative bars -->
+                            <rect x="422" y="120" width="62" height="58" class="bar-neg"></rect>
+                            <rect x="520" y="120" width="62" height="70" class="bar-neg"></rect>
+
+                        </svg>
+
+                        <div class="bar-y-labels">
+                            <span>40</span>
+                            <span>20</span>
+                            <span>0</span>
+                            <span>-20</span>
+                        </div>
+
+                    </div>
+
+                    <div class="bar-x-labels">
+                        <span>Theoretical Gap</span>
+                        <span>Practical skills</span>
+                        <span>Technical Skills</span>
+                        <span>Soft Skills</span>
+                        <span>Problem Solving</span>
+                        <span>Workplace Readiness</span>
+                    </div>
+
+                </section>
+
+
+                <section class="panel retention-panel">
+
+                    <div class="region-tabs retention-head-outer">
+                        <div class="retention-head-inner">
+                            <h2 class="retention-panel">Rooted in Real Trainee Experience</h2>
+                        </div>
+                    </div>
+
+                    <!-- <div class="retention-metric">
+                        <p class="retention-label">Verified Placement Rate</p>
+                        <p class="retention-value dark">86.2% <span class="retention-delta up">↑ 5.1%</span></p>
+                    </div>
+
+                    <hr class="retention-divider">
+
+                    <div class="retention-metric">
+                        <p class="retention-label">6-Month Retention Rate</p>
+                        <p class="retention-value blue">89.4%</p>
+                    </div> -->
+                    <div>
+                        <p class="retention-label">These skill gap figures aren't based on curriculum assumptions — they come straight from what trainees report facing on the job, gathered through structured follow-up surveys at 3, 6, and 12 months post-placement.</p>
+                    </div>
+
+                    <div>
+                        <p class="retention-foot">Refreshed automatically as new feedback comes in</p>
+                    </div>
+
+                </section>
+
+            </div>
+
+
+            <!-- ================= REGIONAL PROGRAM ALIGNMENT ================= -->
+
+            <section class="panel region-panel" id="district-reports">
+
+                <div class="region-header">
+
+                    <div class="region-title">
+                        <span class="region-icon">◈</span>
+                        <div>
+                            <h2>Regional Program Alignment</h2>
+                            <p class="panel-subtitle">District-level alignment to industry hiring signals</p>
+                        </div>
+                    </div>
+
+                    <div class="region-tabs">
+                        <button class="tab active">All Districts</button>
+                        <!-- <button class="tab">Metropolitan</button>
+                        <button class="tab">Rural-North</button>
+                        <button class="tab">Agricultural Corridor</button> -->
+                    </div>
+
+                </div>
+
+                <div class="region-table-scroll">
+                <table class="region-table">
+
+                    <thead>
+                        <tr>
+                            <th>District Name</th>
+                            <th>Placement Success Rate</th>
+                            <th>Average Salary Jump</th>
+                            <th>12-Month Retention Index</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- <option value="Varanasi">Varanasi</option>
+                    <option value="Prayagraj">Prayagraj</option>
+                    <option value="Lucknow">Lucknow</option>
+                    <option value="Jhansi">Jhansi</option>
+                    <option value="Merrut">Merrut</option> -->
+
+                        <tr>
+                            <td>Varanasi</td>
+                            <td>91.4%</td>
+                            <td class="jump">+31.2%</td>
+                            <td>
+                                <div class="index-cell">
+                                    <span class="index-bar"><i style="width:94%"></i></span>
+                                    <span>94</span>
+                                </div>
+                            </td>
+                            <td><span class="badge high">High</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Prayagraj</td>
+                            <td>84.7%</td>
+                            <td class="jump">+24.8%</td>
+                            <td>
+                                <div class="index-cell">
+                                    <span class="index-bar"><i style="width:81%"></i></span>
+                                    <span>81</span>
+                                </div>
+                            </td>
+                            <td><span class="badge medium">Medium</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Lucknow</td>
+                            <td>78.1%</td>
+                            <td class="jump">+19.4%</td>
+                            <td>
+                                <div class="index-cell">
+                                    <span class="index-bar"><i style="width:73%"></i></span>
+                                    <span>73</span>
+                                </div>
+                            </td>
+                            <td><span class="badge low">Low</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Jhansi</td>
+                            <td>88.9%</td>
+                            <td class="jump">+27.6%</td>
+                            <td>
+                                <div class="index-cell">
+                                    <span class="index-bar"><i style="width:88%"></i></span>
+                                    <span>88</span>
+                                </div>
+                            </td>
+                            <td><span class="badge high">High</span></td>
+                        </tr>
+
+                        <tr>
+                            <td>Merrut</td>
+                            <td>71.3%</td>
+                            <td class="jump">+15.1%</td>
+                            <td>
+                                <div class="index-cell">
+                                    <span class="index-bar"><i style="width:66%"></i></span>
+                                    <span>66</span>
+                                </div>
+                            </td>
+                            <td><span class="badge low">Low</span></td>
+                        </tr>
+
+
+                    </tbody>
+
+                </table>
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
